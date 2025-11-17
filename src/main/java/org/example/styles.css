@@ -1,49 +1,191 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>ABC Fitness Studio - Class Schedule</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+/* ===============================
+   GLOBAL STYLES
+================================= */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    color: #333333;
+    background-color: #f5f7f8;
+}
 
-<header>
-    <div class="logo">ABC Fitness Studio</div>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="class-schedule.html">Class Schedule</a></li>
-            <li><a href="about.html">About Us</a></li>
-        </ul>
-    </nav>
-</header>
+header {
+    background-color: #1fa6c8;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    color: white;
+}
 
-<section>
-    <h2>Class Schedule</h2>
+header .logo {
+    font-size: 28px;
+    font-weight: bold;
+}
 
-    <table>
-        <tr>
-            <th>Monday</th>
-            <th>Tuesday</th>
-            <th>Wednesday</th>
-            <th>Thursday</th>
-        </tr>
-        <tr>
-            <td>Yoga</td>
-            <td>Dance</td>
-            <td>Karate</td>
-            <td>Swim</td>
-        </tr>
-    </table>
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
 
-    <button class="cta-button">SIGN UP</button>
-</section>
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
 
-<footer>
-    &copy; 2025 ABC Fitness Studio. All Rights Reserved.
-</footer>
+nav a:hover {
+    text-decoration: underline;
+}
 
-</body>
-</html>
+section {
+    max-width: 1100px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* HERO / PROMO */
+.hero {
+    background-color: #2dbf82;
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+/* CTA BUTTONS */
+.cta-button {
+    background-color: #ff8c00;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.cta-button:hover {
+    background-color: #e67e00;
+}
+
+.clear-button {
+    background-color: #777777;
+}
+
+.clear-button:hover {
+    background-color: #555555;
+}
+
+/* PROMO BOXES */
+.promo-row, .gallery-grid {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.promo-box, .gallery-item {
+    background-color: #d7ebe1;
+    padding: 15px;
+    border-radius: 8px;
+    width: 30%;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.promo-box img, .gallery-item img {
+    width: 100%;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+/* TESTIMONIALS */
+.testimonials, .testimonial-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    text-align: center;
+}
+
+.testimonial-box {
+    background-color: #2dbf82;
+    padding: 20px;
+    border-radius: 8px;
+    width: 40%;
+    color: white;
+}
+
+.testimonial-box img {
+    width: 80px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+/* TABLES */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    border: 1px solid #cccccc;
+    padding: 12px;
+    text-align: center;
+}
+
+th {
+    background-color: #1fa6c8;
+    color: white;
+}
+
+/* FOOTER */
+footer {
+    background-color: #1fa6c8;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+/* FORMS */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+input, textarea {
+    padding: 10px;
+    border: 1px solid #aaaaaa;
+    border-radius: 4px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .promo-row, .testimonial-row, .gallery-grid {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .promo-box, .testimonial-box, .gallery-item {
+        width: 100%;
+    }
+}

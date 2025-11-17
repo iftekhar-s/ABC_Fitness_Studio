@@ -20,25 +20,33 @@
     </nav>
 </header>
 
-<section>
+<section class="about-section">
     <h2>About Us</h2>
     <p>
-        Welcome to ABC Fitness Studio! We offer a variety of classes and programs for all ages.
-        Our mission is to provide a positive and supportive environment for learning and growth.
+        ABC Fitness Studio provides a variety of classes and programs for all ages.
+        Our mission is to promote health, energy, and community in a supportive environment.
     </p>
 
     <h3>Contact Us</h3>
     <form>
         <label for="name">Name</label>
-        <input id="name" type="text" name="name">
+        <input id="name" type="text" name="name" required>
 
         <label for="email">Email</label>
-        <input id="email" type="email" name="email">
+        <input id="email" type="email" name="email" required>
+
+        <label for="phone">Phone</label>
+        <input id="phone" type="tel" name="phone">
 
         <label for="message">Message</label>
-        <textarea id="message" rows="5" name="message"></textarea>
+        <textarea id="message" name="message" rows="5"></textarea>
 
-        <button type="submit" class="cta-button">Send</button>
+        <label>
+            <input type="checkbox" name="customOrder"> I would like a custom training plan
+        </label>
+
+        <button type="submit" class="cta-button">Submit</button>
+        <button type="reset" class="cta-button clear-button">Clear Form</button>
     </form>
 </section>
 
