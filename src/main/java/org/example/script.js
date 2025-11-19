@@ -45,6 +45,23 @@ if (addToCartButtons.length > 0) {
     }
 }
 
+// Add this at the bottom of your existing script.js (or anywhere after `let cart = 0;`)
+
+function viewCart() {
+    if (cart > 0) {
+        alert("You have " + cart + " item(s) in your cart.");
+    } else {
+        alert("Your cart is empty.");
+    }
+}
+
+// Optionally, attach event listener if you add a View Cart button by ID:
+const viewCartBtn = document.getElementById("viewCartBtn");
+if (viewCartBtn) {
+    viewCartBtn.addEventListener("click", viewCart);
+}
+
+
 // --------- ABOUT / CONTACT PAGE FORM ---------
 const contactForm = document.getElementById("contactForm");
 if (contactForm) {
